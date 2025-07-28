@@ -1,0 +1,13 @@
+{
+  "name": "cloud-tester",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"This command will never succeed\" && exit 1",
+    "build": "echo \"Building amazing things right now...\" && sleep 5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
