@@ -1,0 +1,16 @@
+{
+  "name": "rules",
+  "targets": {
+    "build": {
+      "executor": "@nx/conformance:bundle-rules",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "{projectRoot}/dist"
+      }
+    },
+    "publish": {
+      "dependsOn": ["build"],
+      "command": "nx-cloud publish-conformance-rules rules/dist"
+    }
+  }
+}

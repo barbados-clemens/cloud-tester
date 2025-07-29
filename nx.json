@@ -3,12 +3,34 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "{workspaceRoot}/dist"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["{workspaceRoot}/dist"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
     }
-  }
+  },
+  "conformance": {
+    "rules": []
+  },
+  "nxCloudUrl": "https://snapshot.nx.app",
+  "nxCloudId": "6888d0cf600808340def6b68",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    }
+  ]
 }
