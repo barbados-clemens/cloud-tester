@@ -33,6 +33,7 @@
       }
     }
   ],
+  "bust": 1,
   "namedInputs": {
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"],
     "default": ["sharedGlobals"]
