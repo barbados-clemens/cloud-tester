@@ -6,10 +6,6 @@ export default createConformanceRule({
   description: 'workspace level rule check',
   implementation: async (context) => {
     const violations: ConformanceViolation[] = [];
-    violations.push({
-      workspaceViolation: true,
-      message: 'workspace-rule',
-    });
 
     return {
       severity: 'low',
